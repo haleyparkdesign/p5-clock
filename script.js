@@ -18,7 +18,7 @@ function draw() {
     var m = minute();
     drawMinute(m);
 
-    blendMode(OVERLAY);
+    blendMode(DIFFERENCE);
     var s = second();
     drawSecond(s);
 }

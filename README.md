@@ -1,3 +1,4 @@
-# p5 clock
+# p5 clock: Time Wave
 Visualizing time with p5.js
-url: haleypark.design/p5-clock
+
+URL: [haleypark.design/p5-clock](haleypark.design/p5-clock)

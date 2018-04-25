@@ -13,8 +13,8 @@ blobs = [];
 var originX = 0;
 var originY = 0;
 
-for (var i = 20; i < window.innerWidth; i += 400 / 4) {
-    for (var j = 20; j < window.innerHeight/1.29; j += 600 / 6) {
+for (var i = 20; i < window.innerWidth; i += 370 / 4) {
+    for (var j = 20; j < window.innerHeight / 1.29; j += 600 / 6) {
         var b = new Blob(i, j);
         blobs.push(b);
     }
@@ -33,16 +33,16 @@ function draw() {
     var m = minute();
     var s = second();
     var count = 0;
+
     while (count < h) {
         fill(blobs[count].r + s, blobs[count].g + s, blobs[count].b + s);
-        ellipse(blobs[count].x + originX + 80, blobs[count].y + originY + 100, blobs[count].radius, blobs[count].radius);
+        ellipse(blobs[count].x + originX + windowWidth*0.2, blobs[count].y + originY + 100, blobs[count].radius, blobs[count].radius);
         count++;
     }
 
     while (count < h + m) {
-        console.log(count);
         fill(blobs[count].r, blobs[count].g, blobs[count].b);
-        ellipse(blobs[count].x + originX + 80, blobs[count].y + originY + 100, blobs[count].radius / 2, blobs[count].radius / 2);
+        ellipse(blobs[count].x + originX + windowWidth*0.2, blobs[count].y + originY + 100, blobs[count].radius / 2, blobs[count].radius / 2);
         count++;
     }
 }

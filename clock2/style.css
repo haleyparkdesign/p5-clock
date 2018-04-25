@@ -1,3 +1,33 @@
-padding: 0;
-margin: 0;
-overflow: hidden;
+body {
+    margin: 0px;
+    height: 100%;
+    overflow: hidden;
+    background-color: #000;
+}
+
+canvas {
+    border: 0px solid #000;
+    position: relative;
+}
+
+.text {
+    color: #fff;
+    position: absolute;
+    width: 20%;
+    top: calc(50% - 1.5em);
+    margin: 0 auto;
+    padding-left: 2.3em;
+    z-index: 1;
+    font-family: 'Source Code Pro', monospace;
+    line-height: 1.5em;
+}
+
+.text .title {
+    font-size: 1.4em;
+    font-weight: 500;
+}
+
+.text .description {
+    font-size: 1em;
+    font-weight: 100;
+}

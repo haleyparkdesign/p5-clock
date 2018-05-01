@@ -28,3 +28,8 @@ function formatNumString(n) {
     }
     return n;
 }
+
+function windowResized() {
+    resizeCanvas(windowWidth, windowHeight);
+}
+

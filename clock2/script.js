@@ -25,6 +25,7 @@ function setup() { //called once
     noStroke();
     ellipseMode(CENTER);
     background(10, 100, 20);
+    frameRate(1);
 }
 
 function draw() {

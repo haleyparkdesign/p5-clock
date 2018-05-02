@@ -19,7 +19,7 @@ function draw() {
     drawMinute(m);
 
     blendMode(DIFFERENCE);
-    var s = second();
+    var s = millis()/1000;
     drawSecond(s);
 }
 

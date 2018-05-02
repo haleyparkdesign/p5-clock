@@ -1,7 +1,7 @@
 function setup() {
     createCanvas(windowWidth, windowHeight);
     noStroke();
-    frameRate(1);
+    frameRate(20);
 }
 
 function draw() {
@@ -12,7 +12,7 @@ function draw() {
 function pieChart() {
     var h = hour();
     var m = minute();
-    var s = second();
+    var s = millis()/1000;
 
     var colorString = Math.round(255 / 24 * h) + ", " + Math.round(255 / 60 * m) + ", " + Math.round(255 / 60 * s);
 

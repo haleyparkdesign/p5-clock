@@ -1,7 +1,5 @@
 # p5 clocks
-Visualizing time with p5.js in [CMS.844 Exploratory Programming for Arts and Humanities](http://nickm.com/classes/exploratory_programming/2018_spring/)
-
-
+Visualizing time with p5.js
 
 ## Clock 1: Time Wave
 URL: [haleypark.design/p5-clock/clock1](http://haleypark.design/p5-clock/clock1)

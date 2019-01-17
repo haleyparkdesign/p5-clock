@@ -40,9 +40,18 @@ function windowResized() {
 }
 
 function drawOrbits() {
-    if (windowWidth < 800) {
+    if (windowWidth < 800 || windowHeight < 800) {
+
+        var smaller;
+        if (windowWidth < windowHeight) {
+            smaller = windowWidth;
+            bigger = windowHeight;
+        } else {
+            smaller = windowHeight;
+            bigger = windowWidth;
+        }
         // draw orbits
-        for (var i = 0; i < windowWidth * 1.5; i += windowWidth / 8) {
+        for (var i = 0; i < bigger * 1.5; i += smaller / 8) {
             ellipse(0, 0, i);
         }
     } else {

@@ -12,7 +12,7 @@ function draw() {
 function pieChart() {
     var h = hour();
     var m = minute();
-    var s = millis()/1000;
+    var s = millis() / 1000;
 
     var colorString = Math.round(255 / 24 * h) + ", " + Math.round(255 / 60 * m) + ", " + Math.round(255 / 60 * s);
 

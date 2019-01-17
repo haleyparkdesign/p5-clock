@@ -18,8 +18,8 @@ span {
     top: 60px;
     margin: 0 auto;
     z-index: 1;
-    font-family: 'Source Code Pro', monospace;
-    font-size: 1.5em;
-    letter-spacing: 1.4em;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 1.3em;
+    letter-spacing: 1.1em;
     font-weight: 200;
 }

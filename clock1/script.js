@@ -19,7 +19,7 @@ function draw() {
     drawMinute(m);
 
     blendMode(DIFFERENCE);
-    var s = millis()/1000;
+    var s = millis() / 1000;
     drawSecond(s);
 }
 
@@ -34,7 +34,7 @@ function drawHour(currentHour) {
     var heightDiff = 10;
 
     // Iterate over horizontal pixels
-    for (var x = 0; x <= width; x += 10) {
+    for (var x = 0; x <= (width + 50); x += 10) {
         var y = map(noise(xoff, yoff), 0, 0.5, (hourHeight - heightDiff), (hourHeight + heightDiff));
         // Set the vertex
         vertex(x, y);
@@ -46,7 +46,7 @@ function drawHour(currentHour) {
     vertex(width, height);
     vertex(0, height);
     endShape(CLOSE);
-    t = t + 0.001;
+    t += 0.001;
 }
 
 function drawMinute(currentMinute) {
@@ -59,7 +59,7 @@ function drawMinute(currentMinute) {
     var minuteHeight = windowHeight - (windowHeight / 60 * currentMinute);
     var heightDiff = 20;
     // Iterate over horizontal pixels
-    for (var x = 0; x <= width; x += 10) {
+    for (var x = 0; x <= (width + 50); x += 10) {
         var y = map(noise(xoff, yoff), 0, 0.5, (minuteHeight - heightDiff), (minuteHeight + heightDiff));
         // Set the vertex
         vertex(x, y);
@@ -84,7 +84,7 @@ function drawSecond(currentSecond) {
     var secondHeight = windowHeight - (windowHeight / 60 * currentSecond);
     var heightDiff = 30;
     // Iterate over horizontal pixels
-    for (var x = 0; x <= width; x += 10) {
+    for (var x = 0; x <= (width + 50); x += 10) {
         var y = map(noise(xoff, yoff), 0, 0.5, (secondHeight - heightDiff), (secondHeight + heightDiff));
         // Set the vertex
         vertex(x, y);

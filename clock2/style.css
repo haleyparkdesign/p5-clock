@@ -18,7 +18,7 @@ canvas {
     margin: 0 auto;
     padding-left: 2.3em;
     z-index: 1;
-    font-family: 'Source Code Pro', monospace;
+    font-family: 'IBM Plex Mono', monospace;
     line-height: 1.5em;
 }
 
@@ -30,4 +30,12 @@ canvas {
 .text .description {
     font-size: 1em;
     font-weight: 100;
+}
+
+@media(max-width:800px) {
+    .text {
+        top: 30px;
+        width: 100%;
+        text-align: center;
+    }
 }

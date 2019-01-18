@@ -19,8 +19,11 @@ function draw() {
     drawMinute(m);
 
     blendMode(DIFFERENCE);
-    var s = millis() / 1000;
+    var d = new Date();
+    var s = (d.getSeconds() + d.getMilliseconds() / 1000).toFixed(3);
     drawSecond(s);
+
+    console.log(h + ", " + m + ", " + s);
 }
 
 function drawHour(currentHour) {
@@ -71,7 +74,7 @@ function drawMinute(currentMinute) {
     vertex(width, height);
     vertex(0, height);
     endShape(CLOSE);
-    t = t + 0.002;
+    t += 0.002;
 }
 
 function drawSecond(currentSecond) {
@@ -89,14 +92,14 @@ function drawSecond(currentSecond) {
         // Set the vertex
         vertex(x, y);
         // Increment x dimension for noise
-        xoff += 0.05;
+        xoff += 0.02;
     }
     // increment y dimension for noise
     yoff += 0.01;
     vertex(width, height);
     vertex(0, height);
     endShape(CLOSE);
-    t = t + 0.001;
+    t += 0.001;
 }
 
 function windowResized() {
